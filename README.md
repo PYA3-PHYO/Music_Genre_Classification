@@ -1,19 +1,18 @@
-# 🎈 Blank app template
+Music Genre Classification Project 
 
-A simple Streamlit app template for you to modify!
+This is the music genre classification model which was trained by deep convolutional neural network (CNN) using GTZAN dataset( a public dataset from Kaggle).
+The model can classify 10 types of genre, 'blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae',and 'rock'  accoringly.
+You can check the CNN model and training notebook in Model_Training Folder. The Demo of the app can be accessed by running streamlit_app.py.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+Data Understanding
+- Checking the samples in dataset whether it is balanced or not
+- Import IPythin to play the audio data samples
+- Extract and plot the spectrograms which will be used as a data for training the model
 
-### How to run it on your own machine
+Data Preprocessing
+- First, define function to load the audio data and extract spectrograms values. Chunk the audio into smallers pieces by adding overlap duration between chunks. Iterate through all chunk pieces and extract each chunk spectrograms values. Add each values and its corresponding label into new lists and return.
+- By using that function, extract values of audio samples we have from our GTZAN dataset.
+- Split train, test data (80%,20%) respectively.
 
-1. Install the requirements
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+  
